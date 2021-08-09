@@ -5,6 +5,7 @@ import {Header, Navigation} from './Layout/Layout';
 import Posts from './Posts';
 import SinglePost from './SinglePost';
 import ApolloClient, { gql } from 'apollo-boost';
+import './Layout/Navigation.css';
 class Router extends Component {
     state = {  
         posts: []
@@ -55,7 +56,6 @@ class Router extends Component {
                                 return(
                                     <Posts 
                                         posts={this.state.posts}
-                                        deletePost={this.deletePost}
                                     />
                                 );
                             }} />
